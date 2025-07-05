@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DEEBOOK</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffc0cb;
+        font-family: "Funnel Sans", sans-serif;
+        justify-content: center;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: flex-end;
+        background: rgb(255, 192, 203);
+        align-items: center;
+        padding: 8px;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        background: rgb(174, 112, 219);
+      }
+
+      .logo {
+        font-size: 30px;
+        font-weight: bold;
+        color: #ffc0cb;
+      }
+
+      .logo span {
+        color: rgb(174, 112, 219);
+      }
+
+      header input {
+        flex: 1;
+        margin: 0 10px;
+        padding: 8px;
+        border-radius: 0.3rem;
+      }
+
+      header button {
+        padding: 8px 10px;
+        border-color: rgb(147, 112, 219);
+        border-radius: 0.3rem;
+      }
+
+      .icon-user {
+        margin-left: 10px;
+      }
+	  
+	  .navbar {
+	  background: rgb(216, 191, 216);
+	  border-top: 1px solid black;
+	  border-bottom: 1px solid black;
+	  }
+	  
+	  
+	  .navbar .menu {
+	  list-style: none;
+	  margin: 0;
+	  padding: 0;
+	  display: flex;
+	  justify-content: center;
+	  gap: 30px;
+	  }
+	  
+	  .navbar .menu > li {
+	  position: relative;
+	  }
+	  
+	  .navbar .menu > li > a {
+	  display: block;
+	  padding: 18px 10px;
+	  color: black;
+	  font-size30px;
+	  font-size: georgia, serif;
+	  text-decoration: none;
+	  }
+	  
+	  .navbar .menu > li:hover > a {
+	  color: #333;
+	  }
+	  
+      /*dropdown multilevel*/
+	  
+	  .navbar .menu li ul {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background-color:deep purple;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		min-width: 160px;
+		z-index: 999;
+		}
+		
+      .navbar .menu li:hover > ul {
+		display: block;
+		}
+		
+		.navbar .menu li ul li a {
+		background-color: deep purple;
+		color: black;
+		padding: 10px 10px;
+		display: block;
+		text-decoration: none;
+		}
+		
+		.navbar .menu li ul li a:hover {
+		background-color: #e100ff;
+		}
+		
+	/* submenu ke kanan*/
+		.navbar .menu li ul li {
+		position: relative;
+		}
+		.navbar .menu li ul li ul {
+			top: 0;
+			left: 100%;
+	  }
+      
+
+      .slider img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: contain;
+      }
+
+      .kategori-banner {
+        display: flex;
+        justify-content: space-around;
+        margin: 30px;
+      }
+
+      .banner {
+        background: #e100ff;
+        color: white;
+        padding: 70px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 5px;
+        width: 30%;
+      }
+
+      .container {
+        max-width: fit-content;
+        margin: auto;
+      }
+
+      .best-seller {
+        padding: 70px;
+        justify-content: center;
+      }
+
+      .best-seller h2 {
+        margin-bottom: 30px;
+      }
+
+      .produk-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 29px;
+      }
+
+      .produk {
+        width: 150px;
+        text-align: center;
+        background-color: rgb(255, 192, 203);
+        border: 0.1px solid;
+        border-radius: 1px;
+        border-color: #ffc0cb;
+        padding: 18px;
+        padding-inline: 28px;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      .produk img {
+        width: 100%;
+        height: auto;
+        border: 3px solid #ffc0cb;
+      }
+
+      .produk:hover {
+        transform: translateY(2px) scale(1.03);
+        transition: transform 0.3s ease;
+      }
+
+      .judul {
+        font-weight: bold;
+        margin-top: 4px;
+        margin-bottom: 0px;
+        margin-left: 3px;
+        text-align: left;
+      }
+
+      .penulis {
+        font-size: 11px;
+        color: rgb(12, 6, 1);
+        margin-bottom: 0px;
+        margin-top: 0px;
+        margin-left: 3px;
+        text-align: left;
+      }
+
+      .harga {
+        color: rgb(255, 0, 0);
+        font-weight: bold;
+        margin-top: auto;
+        margin-left: 3px;
+        text-align: left;
+      }
+    </style>
+
+    <!-- Topbar -->
+    <div class="topbar">
+      <a href="Registrasi.html" class="register">Registrasi</a>
+      <a href="login.html" class="login">Login</a>
+	  <a href="html lang."en">
+    </div>
+
+    <!-- Header -->
+    <header>
+      <img src="logo.JPG.PNG" alt="logo.JPG.PNG" height="50px" />
+      <div class="logo.JPG.PNG">DE<span>BOOK</span></div>
+      <input type="text" placeholder="" />
+      <button></button>
+      <div class="icon-user"></div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+	<ul class= "menu">
+      <li><a href="link">HOME</a>
+      <li><a href="link">BUKU</a>
+		<ul>
+			<li>
+			<a href="link">Fiksi</a>
+			<ul>
+				<li><a href="link">Novel</a></li>
+				<li><a href="link">Komik</a></li>
+			</ul>	
+			</li>
+			<li>
+			<a href="link">Non-Fiksi</a>
+			<ul>
+				<li><a href="..">Pendidikan</a></li>
+				<li><a href="..">Umum</a></li>
+			</ul>
+			</li>
+	    </ul>
+	    </li>
+	  
+      <li><a href="link">MAJALAH</a></li>
+      <li><a href="link">KORAN</a></li>
+	  </ul>
+    </nav>
+
+    <!-- Slider -->
+    <section class="slider">
+      <img src="logo.JPG.PNG" alt="Slider Promo Buku" />
+    </section>
+
+    <div class="container">
+      <!-- Best Seller -->
+      <section class="best-seller">
+        <h2>Buku Best Seller</h2>
+        <div class="produk-grid">
+          <div class="produk">
+            <a href="link"><img src="hutan.jpg" alt="Buku 1" /></a>
+            <p class="judul">hutan</p>
+            <p class="penulis">Felicia Siantidewi</p>
+            <p class="harga">Rp 85.000</p>
+          </div>
+          <div class="produk">
+            <a href="link"><img src="selena.jpg" alt="Buku 2" /></a>
+            <p class="judul">Selena</p>
+            <p class="penulis">Tere Liye</p>
+            <p class="harga">Rp 85.000</p>
+          </div>
+          <div class="produk">
+            <a href="link"><img src="bulan.jpg" alt="Buku 3" /></a>
+            <p class="judul">Bulan </p>
+            <p class="penulis"> Tere Liye</p>
+            <p class="harga">Rp 94.500</p>
+          </div>
+          <div class="produk">
+            <a href="link"><img src="negerisejutafantasi.jpg" alt="Buku 4" /></a>
+            <p class="judul">Negeri Sejuta Fantasi</p>
+            <p class="penulis"> Zahara Putri, dkk</p>
+            <p class="harga">Rp 40.000</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="best-seller">
+        <h2>Majalah Best Seller</h2>
+        <div class="produk-grid">
+          <div class="produk">
+            <a href="link"><img src="https://images-tm.tempo.co/mbm/cover/2674/cover_15_Oktober_2023_-_Gerilya_Untuk_Putra_Mahkota.jpeg" alt="majalah 1" /></a>
+            <p class="judul">Tempo</p>
+            <p class="harga">Rp 60.000</p>
+          </div>
+          <div class="produk">
+            <a href="link"><img src="https://images-tm.tempo.co/mbm/cover/2663/cover_30_Juli_2023_-_Tergelincir_Minyak_Sawit.jpeg" alt="majalah 2" /></a>
+            <p class="judul">Tergelincir Minyak Sawit</p>
+            <p class="harga">Rp. 50.000</p>
+          </div>
+          <div class="produk">
+            <a href="link"><img src="https://images-tm.tempo.co/kt/cover/2021/08/18/koran_42.jpg" alt="majalah 3" /></a>
+            <p class="judul">Musim Pangkas Dana Pemulihan</p>
+            <p class="harga">Rp 60.000</p>
+          </div>
+          <div class="produk">
+            <a href="link"><img src="https://thvnext.bing.com/th/id/OIP.2zoVfxC8un_SuJwRMRNmMQAAAA?cb=thvnext&rs=1&pid=ImgDetMain" alt="majalah 4" /></a>
+            <p class="judul">Kilau Pembiayaan Hijau</p>
+            <p class="harga">Rp 10.999</p>
+          </div>
+          <div class="produk">
+            <a href="link"><img src="https://images-tm.tempo.co/mbm/cover/2662/cover_23_Juli_2023_-_Pesta_Pora_Nikel_Ilegal.jpeg" alt="majalah 5" /></a>
+            <p class="judul">Pesta Pora Nikel Ilegal</p>
+            <p class="harga">Rp 50.000</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
